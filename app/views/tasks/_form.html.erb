@@ -1,0 +1,27 @@
+<%= form_with model: task do |form| %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+    </div>
+
+    <div>
+        <%= form.label :created_by %>
+        <%= form.text_field :created_by, value: session[:username], readonly: true %>
+    </div>
+
+    <% if session[:role] == "admin" %>
+    <%= form.label :open %>
+    <%= form.check_box :open %>
+    <% else %>
+    <%= form.hidden_field :open, value: true %>
+    <% end %>
+
+    <%= form.submit %>
+
+<%end%>
