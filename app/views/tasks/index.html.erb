@@ -1,7 +1,19 @@
-<h1>Tasks#index</h1>
+<h1>Tasks</h1>
 
 <%= session[:role] %>
-<%= link_to "New Task", new_task_path %>
+
 <% @tasks.each do |task| %>
-<%= link_to task.name, task_path(task) %>
+    <section class="task-container" >
+    <%= link_to task.name, task_path(task) %>
+
+    <% if task.open %>
+    <p class="task-status green" >Open</p>
+    <% else %>
+    <p class="task-status red" >Closed</p>
+    <% end %>
+
+    </section>
 <%end%>
+<section class="new-task" >
+    <%= link_to "New Task", new_task_path %>
+</section>

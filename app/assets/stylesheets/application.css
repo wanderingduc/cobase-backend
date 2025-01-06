@@ -8,3 +8,58 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+section.task-container {
+    margin: 10px 0;
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+section.task-container a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black
+}
+
+p.task-status {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+p.green {
+    color: green;
+}
+
+p.red {
+    color: red;
+}
+
+section.new-task {
+    height: fit-content;
+    width: fit-content;
+}
+
+section.new-task a {
+    font-size: 1em;
+    padding: 8px;
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: 250ms;
+}
+
+section.new-task a:hover {
+    background-color: white;
+    color: black;
+    transition: 250ms;
+}
