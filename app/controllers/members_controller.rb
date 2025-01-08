@@ -2,9 +2,14 @@ class MembersController < ApplicationController
   def index
     if params[:user_id]
       @members = Member.where(user_id: params[:user_id])
+      @member = Member.new
     else
       @members = Member.all
     end
+  end
+
+  def show
+    @member = Member.find(params[:id])
   end
 
   def new

@@ -17,7 +17,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_07_235927) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "members", primary_key: ["user_id", "group_id"], force: :cascade do |t|
+  create_table "members", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "group_id", null: false
     t.datetime "created_at", null: false
