@@ -1,0 +1,12 @@
+<h1>Tasks#index</h1>
+
+
+<% @tasks.each do |t| %>
+    <%= link_to t.name, task_path(t) %>
+   <% if t.open %>
+   <p>a</p>
+   <% else %>
+   <p>b</p>
+   <%end%>
+<% end %>
+<%= link_to "Cancel", tasks_path %>

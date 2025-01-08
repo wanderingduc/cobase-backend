@@ -1,0 +1,10 @@
+<%= form_with model: @group do |form| %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <%= form.submit %>
+
+<% end %>

@@ -1,0 +1,7 @@
+<h1>Members#index</h1>
+
+<% @members.each do |member| %>
+<% g = Group.find(member.group_id) %>
+<% u = User.find(member.user_id) %>
+<p><%= g.name %> | <%= u.username %></p>
+<% end %>
