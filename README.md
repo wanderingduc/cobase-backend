@@ -1,24 +1,3 @@
-# README
+# cobase-backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Codebase handling backend and web-frontend(because Rails) for a collaborative task-tracking application. Future plans are to make it serve JSON too for use with mobile application(coming soon(maybe)).
