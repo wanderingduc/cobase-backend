@@ -29,6 +29,6 @@ class MembersController < ApplicationController
 
   private
   def member_params
-    params.expect(member: [:user_id, :group_id])
+    params.expect(member: [ :user_id, :group_id ])
   end
 end

@@ -18,6 +18,6 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.expect(group: [:name])
+    params.expect(group: [ :name ])
   end
 end
