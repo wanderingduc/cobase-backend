@@ -1,7 +1,9 @@
-<h1>Users#index</h1>
+<h1>Users</h1>
 
 <% @users.each do |user| %>
 <%= link_to user.username, user %>
 <% end %>
 
-<%= link_to "New", new_user_path %>
+<%= link_to "New", new_user_path, class: "button-normal" %>
+<%= link_to "Cancel", tasks_path, class: "button-inverted" %>
+
