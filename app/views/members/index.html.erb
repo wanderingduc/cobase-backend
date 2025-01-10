@@ -3,7 +3,7 @@
 <% @members.each do |member| %>
 <% g = Group.find(member.group_id) %>
 <% u = User.find(member.user_id) %>
-<p><%= g.name %> | <%= u.username %></p>
-<%= link_to g.name + " " + u.username, member_path(member.id) %>
+<%= link_to g.name + " | " + u.username, member_path(member.id) %>
 
 <% end %>
+<%= link_to "Cancel", tasks_path, class: "button-inverted" %>

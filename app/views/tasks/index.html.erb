@@ -2,17 +2,22 @@
 
 
 <% @tasks.each do |t| %>
-    <%= link_to t.name, task_path(t) %>
-   <% if t.open %>
-   <p>a</p>
-   <% else %>
-   <p>b</p>
-   <%end%>
+    <%= link_to task_path(t), class: "task-container" do %>
+        <section class="task-container" >
+           <p class="task-title" ><%= t.name %></p>
+            <% if t.open %>
+                <p class="open" >Open</p>
+            <% else %>
+                <p class="closed" >Closed</p>
+            <%end%>
+        </section>
+    <%end%>
 <% end %>
 
 <% if session[:role] == 'admin' %>
-    <%= link_to "Members", members_path %>
-    <%= link_to "Users", users_path %>
-    <%= link_to "Groups", groups_path %>
+    <%= link_to "Members", members_path, class: "button-normal" %>
+    <%= link_to "Users", users_path, class: "button-normal" %>
+    <%= link_to "Groups", groups_path, class: "button-normal" %>
 <%end%>
-<%= link_to "Cancel", tasks_path %>
+<%= link_to "New task", new_task_path, class: "button-normal" %>
+<%= link_to "Cancel", tasks_path, class: "button-inverted" %>

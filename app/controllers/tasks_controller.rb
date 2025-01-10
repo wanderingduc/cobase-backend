@@ -35,8 +35,14 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
+  end
+
   private
   def task_params
-    params.expect(task: [:name, :description, :created_by, :open])
+    params.expect(task: [ :name, :description, :created_by, :open ])
   end
 end

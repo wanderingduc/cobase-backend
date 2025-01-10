@@ -5,4 +5,5 @@
 <%= @task.created_by %>
 <%= @task.owner %>
 <%= @task.open %>
-<%= link_to "Cancel", tasks_path %>
+<%= button_to "Delete", @task, method: :delete, data: {turbo_confirm: "Delete task?"}, class: "button-warning" %>
+<%= link_to "Cancel", tasks_path, class: "button-inverted" %>
