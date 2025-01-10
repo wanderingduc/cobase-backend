@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root "tasks#index"
   resources :tasks
   resources :users do
-    resources :members, only: [:index]
+    resources :members, only: [ :index ]
   end
   resources :members
   resources :groups
